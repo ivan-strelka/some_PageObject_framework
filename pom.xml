@@ -11,7 +11,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <suiteXml>test.xml</suiteXml>
+        <suiteXml>testng.xml</suiteXml>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <aspectj.version>1.9.7</aspectj.version>
@@ -69,7 +69,7 @@
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                     </systemProperties>
-                    <suiteXmlFiles>src/test/tesources/${suiteXml}</suiteXmlFiles>
+                    <suiteXmlFiles>src/test/resources/${suiteXml}</suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -84,8 +84,11 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.9</version>
                 <configuration>
-                    <reportVersion>2.6.0</reportVersion>
+                    <reportVersion>2.16.1</reportVersion>
                     <resultsDirectory>allure-results</resultsDirectory>
+                    <allureDownloadUrl>
+                        https://github.com/allure-framework/allure2/releases/download/2.16.1/allure-2.16.1.zip
+                    </allureDownloadUrl>
                 </configuration>
             </plugin>
         </plugins>
